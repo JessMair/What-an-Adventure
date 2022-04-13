@@ -5,10 +5,10 @@ import time
 answer_A = ["A", "a"]
 answer_B = ["B", "b"]
 
-#To reduce duplication of code 
+# To reduce duplication of code 
 required = ("\nUse only A or B\n")
 
-#Intro the player 
+# Intro the player 
 print("""You have opened the doors of the unknown""")
 
 def get_name():
@@ -47,46 +47,61 @@ if answer is A:
           The bear got you!! Game over")
 
 elif answer is B: 
-  # Question 2
-  print ("""That was a clever move. The coast is now clear, 
+  option_play_dead()
+
+else: print ("Incorrect response")
+get_response()
+
+def option_play_dead():
+#Question 2
+    print ("""That was a clever move. The coast is now clear, 
   you start walking and 5 minutes later you come accross a 
   paddle boat and a sleigh. """)
   
-  time.sleep(3)
+time.sleep(3)
             
-  print("""Pick one to continue your journey. 
+print("""Pick one to continue your journey. 
   Type: 
   A. Paddle 
   B. Sleigh """)
-  choice = input(">>> ")
-
-  else: print ("Incorrect response")
-  get_response()
+choice = input(">>> ")
 
   # Below are the consequences of the answers to question 2 
-  if answer is A: 
+if answer is A: 
+  option_paddle()
+ 
+elif answer is B:
+    print ("Ummm, there are no hounds to pull the sleigh. Game over !!")
+
+else: print ("Incorrect response")
+get_response()
+
+def option_paddle():
   # Question 3
-  print(""""That turned out to be a wise choice because you soon
+   print(""""That turned out to be a wise choice because you soon
           come across a river and use your boat to get across. Now on the other side you
           find a jungle, deep in this jungle you bump into a tiger. Do you climb a tree or
           approach the tiger to reassure him that you are friendly?""")
 
-  time.sleep(2)
+time.sleep(2)
 
-  print("""Type:
+print("""Type:
   A. To climb 
   B. To approach """)
-  choice = input(">>> ")
-
-  elif answer is B:
-    print ("Ummm, there are no hounds to pull the sleigh. Game over !!")
-
-  else: print ("Incorrect response")
-  get_response()
+choice = input(">>> ")
   
 # Below are the consequences to the answers to question 3
 if answer is A:
-# Question 4
+  option_climb()
+
+elif answer is B: 
+   print("uh-oh! Not the wisest decision, the tiger is not pleased. Game Over !!")
+
+else: print ("Incorrect response")
+get_response()
+  
+def option_climb():
+  # Question 4
   print(""""Well done, getting high up is the smart
     thing to do. The coast looks clear but you can not be too 100% certain. 
     Do you take a nap until it gets dark or do you climb 
@@ -98,18 +113,18 @@ if answer is A:
   A. To nap 
   B. To climb down """)
   choice = input(">>> ")
-
-  elif answer is B: 
-    print("uh-oh! Not the wisest decision, the tiger is not pleased. Game Over !!")
-
-  else: print ("Incorrect response")
-  get_response()
   
 # Below are the consequences to the answers to question 4
 if answer is A:
   print("Oh dear, you fell off whilst sleeping. Game over!!")
 
 elif answer is B: 
+  option_climb_down()
+
+else: print ("Incorrect response")
+get_response()
+
+def option_climb_down():
   #Question 5
   print("""You make your way through the jungle 
   and come upon a treasure chest with a key""")
@@ -122,27 +137,22 @@ elif answer is B:
   B. To keep walking """)
   choice = input(">>> ")
 
-else: print ("Incorrect response")
-get_response()
-
 # Below are the consequences to the answers to question 5
 if answer is A: 
   print("Uh-oh, you have unleashed a king cobra aarggghhhh!! Game over!!")
 
 elif answer is B:
-  # Question 6
-  print("You followed your instincts and kept the lid on the treasure box. ")
-
+  option_keep_walking()
 
 else: print ("Incorrect response")
 get_response()
 
+def option_keep_walking():
+# Question 6
+  print("You followed your instincts and kept the lid on the treasure box. ")
+
+
 # Below are the consequences to the answers to question 6
-
-
-            
-              
-
 
 
 get_name()
