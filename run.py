@@ -41,31 +41,107 @@ print (""" You have 2 options, start running or lay on the ground and play dead.
   B. Play dead """)
 choice = input(">>> ") 
 
+# Below are the consequences of the answers to question 1
 if answer is A: 
   print("Did you really think you could out run a polar bear?\
           The bear got you!! Game over")
 
 elif answer is B: 
-  print ("""That was a clever move.\
-          The coast is now clear, you start walking and 5 minutes later you\
-            come accross a paddle boat and a sleigh.Pick one to continue\
-              your journey. 
-              Type: 
-              A. Paddle 
-              B. Sleigh """)
+  # Question 2
+  print ("""That was a clever move. The coast is now clear, 
+  you start walking and 5 minutes later you come accross a 
+  paddle boat and a sleigh. """)
+  
+  time.sleep(3)
+            
+  print("""Pick one to continue your journey. 
+  Type: 
+  A. Paddle 
+  B. Sleigh """)
   choice = input(">>> ")
 
-  #else : print ("Incorrect response")
+  else: print ("Incorrect response")
   get_response()
 
+  # Below are the consequences of the answers to question 2 
+  if answer is A: 
+  # Question 3
+  print(""""That turned out to be a wise choice because you soon
+          come across a river and use your boat to get across. Now on the other side you
+          find a jungle, deep in this jungle you bump into a tiger. Do you climb a tree or
+          approach the tiger to reassure him that you are friendly?""")
+
+  time.sleep(2)
+
+  print("""Type:
+  A. To climb 
+  B. To approach """)
+  choice = input(">>> ")
+
+  elif answer is B:
+    print ("Ummm, there are no hounds to pull the sleigh. Game over !!")
+
+  else: print ("Incorrect response")
+  get_response()
+  
+# Below are the consequences to the answers to question 3
+if answer is A:
+# Question 4
+  print(""""Well done, getting high up is the smart
+    thing to do. The coast looks clear but you can not be too 100% certain. 
+    Do you take a nap until it gets dark or do you climb 
+    down to continue your journey?""")
+
+  time.sleep(2)
+
+  print("""Type:
+  A. To nap 
+  B. To climb down """)
+  choice = input(">>> ")
+
+  elif answer is B: 
+    print("uh-oh! Not the wisest decision, the tiger is not pleased. Game Over !!")
+
+  else: print ("Incorrect response")
+  get_response()
+  
+# Below are the consequences to the answers to question 4
+if answer is A:
+  print("Oh dear, you fell off whilst sleeping. Game over!!")
+
+elif answer is B: 
+  #Question 5
+  print("""You make your way through the jungle 
+  and come upon a treasure chest with a key""")
+
+  time.sleep(2)
+
+  print("""Do you open it or keep walking? 
+  Type 
+  A. To open it 
+  B. To keep walking """)
+  choice = input(">>> ")
+
+else: print ("Incorrect response")
+get_response()
+
+# Below are the consequences to the answers to question 5
+if answer is A: 
+  print("Uh-oh, you have unleashed a king cobra aarggghhhh!! Game over!!")
+
+elif answer is B:
+  # Question 6
+  print("You followed your instincts and kept the lid on the treasure box. ")
+
+
+else: print ("Incorrect response")
+get_response()
+
+# Below are the consequences to the answers to question 6
 
 
             
               
-
-
-
-
 
 
 
