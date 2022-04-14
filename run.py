@@ -30,8 +30,8 @@ def game():
     2 options to choose from
     """
 # Question 1    
-    print ("You open your eyes to find that you can see snow miles on end.\
-      A polar bear appears charging at you some 50 meters away.")
+    print ("""You open your eyes to find that you can see snow miles on end.
+      A polar bear appears charging at you some 50 meters away.""")
      
 time.sleep(2)
 
@@ -149,7 +149,7 @@ get_response()
 
 def option_keep_walking():
 # Question 6
-  print("You followed your instincts and kept the lid on the treasure box. ")
+  print("""You followed your instincts and kept the lid on the treasure box."""")
 
 
 # Below are the consequences to the answers to question 6
