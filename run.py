@@ -174,7 +174,7 @@ def game_over(is_lost):
 you're dead - You lose! """)
 
     else:
-        print("""Well done for reaching the end! If I go on an aventure I
+        print("""Well done for reaching the end! If I go on an adventure I
 sure hope it's with you! You win!""")
 
     exit()
