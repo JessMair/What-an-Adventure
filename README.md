@@ -114,7 +114,7 @@ The following steps were followed to maintain version control;
 
 This is the process I followed having completing each significant section of code, I typed the following into the terminal:
 - git add . (This added the work to git)
-- git commit -m "commit message" (This committed the work)
+- git commit -m "COMMIT MESSAGE" (This committed the work)
 - git push (This pushed the work to GitHub)
 
 

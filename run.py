@@ -9,7 +9,9 @@ answer_B = ["B", "b"]
 required = ("\nUse only A or B\n")
 
 # Intro the player
-print("""You have opened the doors of the unknown""")
+print("""You have opened the doors of the unknown. If you choose to embark
+upon this journey there will be faced with 2 choices at every turn.
+There is only one correct answer. Your fate is in your hands only!""")
 
 
 def get_name():
