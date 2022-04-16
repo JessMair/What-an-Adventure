@@ -13,40 +13,7 @@ Here is the link for [What An Adventure]()
 This game has been created for those who enjoy games where there are multiple choices leading to 
 
 
-# UX - User Experience
 
-The project was planned in 5 stages. 
-
-- Strategy Plane 
-
-- Scope Plane 
-
-- Structure Plane
-
-- Skeleton Plane
-
-- Surface Plane 
-
-
-# The Strategy Plane 
-
-
-## The Owner
-
-
-
-# The Scope Plane
-
-The features of this project:
-
-
-
-
-# The Structure Plane 
-
-
-
-# The Skeleton Plane 
 
 
 
@@ -59,23 +26,24 @@ Below is a link to the flowchart I had completed
 
 
 
-
-# The Surface Plane 
-
 # Technologies used
  
 - [Github]( https://github.com/) to keep the file 
 - [Gitpod]( https://www.gitpod.io/) for version control
+
+## Languages used
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 
 
 # Resources
 - [Code Institute](https://codeinstitute.net/) Course material
 - [Code Institute](https://codeinstitute.net/) Slack community 
 - [W3Schools]( https://www.w3schools.com/) 
-- [PEP8]()
-
-- [Am I Responsive](http://ami.responsivedesign.is/) – Check the sites responsiveness
-- [Stack Overflow]()
+- [PEP8](http://pep8online.com/)
+- [Am I Responsive](http://ami.responsivedesign.is/) – Check site and for header image of this README file
+- [Stack Overflow](https://stackoverflow.com/)
 
 
 # Testing
@@ -84,18 +52,10 @@ Below is a link to the flowchart I had completed
 
 ## Validators
 
-<img src="" alt="PEP8 Validation">
+<img src="images/pep8validator" alt="PEP8 Validation">
 
-
-
-
-
-# Responsiveness 
-
-I checked the website's responsiveness using Google Chrome Dev Tools. Mobile, tablet and desktop sizes were tested, and all worked well. 
-It also responded on each breakpoint that were set up on Media Query's and no visual or functional errors found
-
-
+I ran the code for the application through the PEP8 validator to ensure that it was free of bugs and will run smoothly once deployed. 
+The code is completely free of any issues. 
 
 # Version Control 
 
@@ -121,29 +81,44 @@ This is the process I followed having completing each significant section of cod
 
 # Deployment 
 
-I followed the below steps on GitHub to deploy the website. 
+## Deployment to Heroku
 
-- Go to repository and select 'settings'. 
-- Under the 'Github pages@ section, click on the live link. 
-- On "Source", select "Branch: main' for Branch and click save.
-- The website is now published on GitHub Pages and the link is provided on the same section
+- Log into Heroku (You will need to create an account if you do not have one)
+- Click on the button labelled "New" from teh dashboard. This is located in the right hand corner, just under the header.
+- Selcet "Create new app"
+- Enter a name for the applocation. This name must be original. Choose the correct region and click "Create App".
+- On the project page, select the "settings" tab. 
+- Then selcet "config Vars" and enter the following details in the corresponding fields: 
+    Key = PORT
+    Value = 8000
+- Select the "Add" button, this will add the Convig Vars. 
+- Scroll to the buildpacks section and selects "Add Buildpacks"
+- Add the Python buildpack.
+- Add the node.jsbuildpack.
+- It is important to ensure that the Python buildpack is listed above the node.js buildpack.
+- At the top of the page there is a "Deploy" tab that must be selected. 
+- Select the Github deployment method.
+- Search for your repository name, then click the "Connect" button to link your repository.
+- At the bottom of this page, select the deployment type. This can be automatic or manual. Automatic Deployment will redeploy the project to Heroku every time it is pushed to GitHub. I chose manual. The project is deployed. 
 
 
 
 
-## Reminders
+Used technologies and credits
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-Connect your GitHub repository and deploy as normal.
+Python Libraries
+GSpread enables the Google Sheets savegame system.
+Time enables the "p_d" print delay function.
+Sys enables the "delete_line" function (and its dependent "pause" function).
+GetPass enables the "pause" function.
+Other Technologies
+GitHub
+Google Sheets
+Python Tutor
+PEP8
+Credits
+Aniket Navlur and Alper demonstrated how to use "stdout" to delete printed lines.
+Mike Hordecki demonstrated how to use "enumerate."
+Pedro Lobito provided the "next_available_row" function.
+Star Trek: Time Loop by DeannaCarina provided some code direction, as well as giving an example of an excellent story-based Python project.
+The Code Institute Slack provided an invaluable database of information and community of support. I am particularly grateful to the msletb-nov-2021 cohort, our facilitator Kasia, and my mentor Darío. From my cohort, special mentions to Rhiannon McNulty and Rachel Rock, who are always ready and willing to provide feedback.
