@@ -13,6 +13,8 @@ print("""You have opened the doors of the unknown. If you choose to embark
 upon this journey there will be faced with 2 choices at every turn.
 There is only one correct answer. Your fate is in your hands only!""")
 
+# Player promt to type name to play
+
 
 def get_name():
     """ Player prompted to enter name to begin playing. """
@@ -25,6 +27,9 @@ def get_name():
         print("""you must enter a name to play""")
         get_name()
 
+
+# Function added to reduce duplication of code unecessairly. 
+# While loop added to prompt player when their repsonse entry is incorrect.
 
 def get_response():
     """ Player promted to enter A or B """
@@ -43,8 +48,11 @@ def game():
     """
 
     # Question 1
-    print("""You open your eyes to find that you can see snow miles on end.
-A polar bear appears charging at you some 50 meters away.""")
+    print("""You close your eyes in anticipation of the game starting.
+    Well it has started and you feel a cold breeze enveloping you.
+    You open your eyes to find snow miles on end,
+    and something moving in the distance.
+    A polar bear appears charging at you some 50 meters away.""")
 
     time.sleep(2)
 
@@ -131,8 +139,8 @@ down to continue your journey?""")
 
     # Below are the consequences to the answers to question 4
     if choice in answer_A:
-        print("Oh dear, you fell off whilst sleeping and fall to\
-your death! Game over!!")
+        print("""Oh dear, you fell off whilst sleeping and fall to
+        your death! Game over!!""")
         game_over(True)
 
     else:
@@ -141,8 +149,13 @@ your death! Game over!!")
 
 def option_climb_down():
     # Question 5
-    print("""You make your way through the jungle
-and come upon a treasure chest with a key""")
+    print("""You make your way through. It has been a long journey and you
+    would like nothing but to find a lucky break out out of this chaos.
+    You see something shining in the distance and pick up your pace to
+    to get to it quicker. Your eyes light up as you realsie it is
+    a treasure chest with a key. You imagine what could be inside this
+    chest. As your minds starts racing you realise it is time
+    to make a choice...""")
 
     time.sleep(2)
 
@@ -164,9 +177,11 @@ Game over!!")
 
 
 def option_keep_walking():
-    # Question 6
     print("""You followed your instincts and kept the lid on
-the treasure box.""")
+the treasure box. Who would leave a
+chest full of treasure in thh jungle anyway?/n
+You see a door, no walls around it. This time, there are no options.
+You will be walking through it""")
     game_over(False)
 
 
@@ -176,7 +191,7 @@ def game_over(is_lost):
 you're dead - You lose! """)
 
     else:
-        print("""Well done for reaching the end! If I go on an adventure I
+        print("""You made it!! Well done for reaching the end! If I go on an adventure I
 sure hope it's with you! You win!""")
 
     exit()
@@ -186,4 +201,3 @@ get_name()
 
 
 game()
-
