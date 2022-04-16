@@ -28,7 +28,7 @@ def get_name():
         get_name()
 
 
-# Function added to reduce duplication of code unecessairly. 
+# Function added to reduce duplication of code unecessairly.
 # While loop added to prompt player when their repsonse entry is incorrect.
 
 def get_response():

@@ -1,7 +1,7 @@
 # What An Adventure - A Milestone Project
 
 
-AM I RESPOSIVE IMAGE TO GO HERE 
+<img src="images/deployedimage.png" alt="Am I Responsive">
 
 
 My third milestone project, undertaken as part of the Code Institutes Diploma in Software Development. 
