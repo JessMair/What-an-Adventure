@@ -11,7 +11,7 @@ Here is the link for [What An Adventure](https://whatanadventure.herokuapp.com/)
 
 # Who Is This Game For?
 
-This game has been designed for people that will enjoy using their imagination whilst playing a game. 
+This is a text-based adventure and has been designed for people that will enjoy using their imagination whilst playing a game. 
 The aim behind this adventure game is to quickly build a scenario in the players mind followed by a quick "make your choice" style questions. A light hearted game infused with a little humour. 
 
 
@@ -38,7 +38,6 @@ What An Adventure leads the player through various scenarios that are certainly 
 The game is intended to be playful and witty in its naration. The scenarios are do overlap slightly to maintain a continuation of the story in the game. However the focus of the game is to keep the player engaged in the "new" scenario theyr are faced with, should they pass the previous succesfully. Should the player make the wrong choice, they would have to play the game from the beginning. 
 
 
-
 # Code Design
 
 The functions of the game have been designed to provide redcuce the amount of code that is repeated and also to make it much easier to expand to the story in the future by adding further scenario before the conclusion of the game is reached. 
@@ -46,19 +45,25 @@ The functions of the game have been designed to provide redcuce the amount of co
 
 # Story Functions 
 
-- Time.sleep - 
-- get_name()   Capatilze() / Strip()
+- time.sleep - This funtion allowed a time delay of a few seconds before the options for the player pop up. This was implemented mostly to give the player a sense of forwards moving motion of the game. It also slows the speed at which information is presented to the player, thus allowing the player to digest the content at a better pace. 
 
-- game()
+- print - to display various texts through out the game, including the story and the choices. 
 
-- get_response 
-- While loop / Choice input 
+- get_name() - This prompts the player to input their name and once entered is diplayed in the welcoming statement that follows. 
+- capatilze() / strip() - Added to the get name function so that any white spaces are renoved and the name is capatalized when returned in the welcome statement. 
 
-- option_play_dead / option_paddle() / option_climb() / option_climb_down() / option_keep_walking()
-- game_over - 
+- game() - This function was defined to outline where the game begins and ends. Most functions of the game are played within this function. 
 
+- if/else - A key function throughout the game as it provides the basis of an option to the player.
 
+- get_response - The funstion was introduced following the testing of the game and was used to replace the elif function and therefore led to the reduction of the code as it replaced the repition of the elif code. 
+- While loop / Choice input - The choice input submerged within the while loop was also a late introdcution and again reduced the need for reptitive code. The upper() and strip() functions follow the choice input function to address the need for a capatalized answer and also to remove any white saces surrounding the answer that would make it void. The while loop is imperative in prompting an acceptable response from the player by making them aware that they need to select either "A" or "B". 
 
+- option_play_dead / option_paddle() / option_climb() / option_climb_down() / option_keep_walking() - These functions all follow on from the player making the correct choice and lead them to the next question. These functions prevent the code from becoming nested as each function leads the player to the next (provided they have given the correct answer). 
+
+- game_over(True) - Placed under each incorrect response and leads to a display of text telling the palyer that they have lost the game. 
+
+- game_over(false) - This function leads to a display of text telling the player that they have one the game. 
 
 
 # Planning
@@ -94,22 +99,25 @@ Below is a link to the flowchart I had completed prior to building the applicati
 
 - [Time](https://docs.python.org/3/library/time.html) Enables the a delay of a few seconds before presenting the options to the player to make their selection after the scenario has been set. 
 
+
 # Testing
 
-[]
+
 
 # Future Features 
 
-There is plentiful scope for how this game can be expanded in the future. Aside the obvious option of adding more scenarios and thus exanding the game; I would potentially want to create a fork in the game leading to multiple paths, of which most eventually lead to the player losing. This would make the game more challenging to win as it would take the player longerto discover where they went wrong. 
-Additionally I would like to add some more features to the game, such as 
+Due to time constraints, I was not able to explore all the features that I had wanted to include. 
+There is plentiful scope for how this game can be expanded in the future. Aside the obvious option of adding more scenarios and thus exanding the game; I would potentially want to create a fork in the game leading to multiple paths, of which most eventually lead to the player losing. This would make the game more challenging to win as it would take the player longer to discover where they went wrong. 
+Additionally I would like to add some more scope to the functionality of the game, by allowing the player to pick up an object along the way. Another feature I would be interested in adding would be giving the player a success score, depending on how far they made it through the game. 
 
 
-## Validator
+# Validator
 
 <img src="images/pep8validator.png" alt="PEP8 Validation">
 
 I ran the code for the application through the PEP8 validator to ensure that it was free of bugs and will run smoothly once deployed. 
 The code is completely free of any issues. 
+
 
 # Version Control 
 
@@ -130,7 +138,6 @@ This is the process I followed having completing each significant section of cod
 - git add . (This added the work to git)
 - git commit -m "COMMIT MESSAGE" (This committed the work)
 - git push (This pushed the work to GitHub)
-
 
 
 # Deployment 
